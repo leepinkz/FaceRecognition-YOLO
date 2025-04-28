@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FaceApp</class>
+ <widget class="QWidget" name="FaceApp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>深度学习人脸识别系统</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QWidget {
+        background: #f5f6fa;
+        color: #222;
+        font-family: "Microsoft YaHei", Arial, sans-serif;
+        font-size: 16px;
+    }
+    QLabel#titleLabel {
+        font-size: 26px;
+        font-weight: bold;
+        color: #444;
+    }
+    QPushButton {
+        background: #e0e0e0;
+        border: 1px solid #bbb;
+        border-radius: 6px;
+        padding: 8px 20px;
+        font-size: 16px;
+        outline: none;
+    }
+    QPushButton:focus {
+        outline: none;
+    }
+    QPushButton:hover {
+        background: #d0d0d0;
+    }
+    QLineEdit {
+        background: #fff;
+        border: 1px solid #bbb;
+        border-radius: 4px;
+        padding: 6px;
+    }
+    QTableWidget {
+        background: #fafbfc;
+        border: 1px solid #bbb;
+        border-radius: 4px;
+        font-size: 15px;
+    }
+    QHeaderView::section {
+        background: #e0e0e0;
+        font-weight: bold;
+        font-size: 15px;
+        border: 1px solid #bbb;
+    }
+    QLabel#statusLabel {
+        color: #0078d7;
+        font-size: 16px;
+    }
+   </string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QLabel" name="cameraLabel">
+     <property name="minimumSize">
+      <size>
+       <width>480</width>
+       <height>360</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="text">
+      <string>摄像头画面</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="rightLayout">
+     <item>
+      <widget class="QLabel" name="titleLabel">
+       <property name="text">
+        <string>人脸识别系统</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="nameEdit">
+       <property name="placeholderText">
+        <string>请输入姓名</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="idEdit">
+       <property name="placeholderText">
+        <string>请输入ID</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="registerBtn">
+       <property name="text">
+        <string>注册人脸</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="recognizeBtn">
+       <property name="text">
+        <string>开始识别</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="startCameraBtn">
+       <property name="text">
+        <string>开启摄像头</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="stopCameraBtn">
+       <property name="text">
+        <string>关闭摄像头</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="statusLabel">
+       <property name="text">
+        <string>状态：等待操作</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="resultTable">
+       <property name="columnCount">
+        <number>3</number>
+       </property>
+       <property name="rowCount">
+        <number>0</number>
+       </property>
+       <column>
+        <property name="text">
+         <string>时间</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>姓名</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="exportBtn">
+       <property name="text">
+        <string>导出识别记录</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
